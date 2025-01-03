@@ -25,7 +25,7 @@ export const capturePayment = createAsyncThunk(
   "/order/capturePayment",
   async ({ paymentId, payerId, orderId }) => {
     const response = await axios.post(
-       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/order/capture",
+       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/order/capture`,
       {
         paymentId,
         payerId,
