@@ -48,7 +48,7 @@ export const updateCartQuantity = createAsyncThunk(
   "cart/updateCartQuantity",
   async ({ userId, productId, quantity }) => {
     const response = await axios.put(
-      `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/cart/update-cart",
+      `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/shop/cart/update-cart`,
       {
         userId,
         productId,
