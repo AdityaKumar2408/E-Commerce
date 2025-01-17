@@ -34,7 +34,7 @@ app.use(
       "Content-Type",
       "Authorization",
       "Access-Control-Allow-Methods",
-      "Access-Control-Request-Headers"
+      "Access-Control-Request-Headers",
       "Cache-Control",
       "Expires",
       "Pragma",
