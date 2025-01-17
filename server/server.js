@@ -17,10 +17,6 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
-//create a database connection -> u can also
-//create a separate file for this and then import/use that file here
-// MONGODB_URI='mongodb+srv://adityachouhan7705:18Y8WA0cF8sji5c5@cluster0.1dil2.mongodb.net/code-code?retryWrites=true&w=majority&appName=Cluster0'
-// JWT_SECRET=my_secret_key
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -32,7 +28,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://e-commerce-0kg9.onrender.com"],
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
