@@ -12,7 +12,7 @@ export const registerUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}api/auth/register`,
+       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/register`,
       formData,
       {
         withCredentials: true,
@@ -28,7 +28,7 @@ export const loginUser = createAsyncThunk(
 
   async (formData) => {
     const response = await axios.post(
-       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}api/auth/login`,
+       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/login`,
       formData,
       {
         withCredentials: true,
@@ -44,7 +44,7 @@ export const logoutUser = createAsyncThunk(
 
   async () => {
     const response = await axios.post(
-       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}api/auth/logout`,
+       `${import.meta.env.VITE_REACT_APP_BACKEND_BASEURL}/api/auth/logout`,
       {},
       {
         withCredentials: true,
